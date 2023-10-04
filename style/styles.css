@@ -1,0 +1,673 @@
+/*  */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    font-family: 'Be Vietman Pro', sans-serif ;
+    font-size: 12px;
+}
+
+/*  Definición de variables personalizadas
+------------------------------------------------------------
+*/
+:root {
+    /*  Definición de paleta de colores
+    */
+    --color-palette-1: #6E7F71;
+    --color-palette-2: #EFEDE3;
+    --color-palette-3: #FFFFFF;
+    --color-palette-4: #F8D06B;
+    --color-palette-5: #774C20;
+}
+
+/* Barra de navegación 
+------------------------------------------------------------
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 92px;
+}
+
+.init__sect {
+    /*overflow: hidden;*/
+    position: fixed;
+    float: right;
+    z-index: 10;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;    
+    width: 100%;
+    top: 0;
+    padding: 0 30px;
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    background-color: var(--color-palette-2);
+}
+
+.logo {
+    max-width: 100px;
+    padding: 18px 0;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: space-around;
+    max-width: 562px;
+}
+
+.navi-link {
+    display: block;
+    width: 110px;
+    padding: 8px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: var(--color-palette-5);
+    transition: 0.2s ease-in-out;
+}
+
+.navi-link:hover {
+    font-weight: bolder;
+    transform: translate(0, -4px);
+}
+
+.link-form {
+    width: 160px;
+    padding: 10px;
+    font-family: 'Autour One';
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--color-palette-2);
+    background-color: var(--color-palette-5);
+    transition: .1s ease-in;
+}
+
+.link-form:hover {
+    letter-spacing: 3.5px;
+}
+
+.cont-nav {
+    display: none;
+}
+
+/* Contenedores */
+.sect-container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#banner, #shelter, #gallery, #allies, #subscribe {
+    width: 100%;
+}
+
+.flex-content-def {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;    
+    align-items: center;
+}
+
+.image-hover {
+    width: 100%;
+    height: 100%;
+    filter: brightness(98%);
+    transition: .3s ease-in-out;
+}
+
+.image-hover:hover {
+    filter: brightness(100%);
+    transform: scale(1.05);
+}
+
+h2 {
+    margin: 0 auto;
+    font-family: 'Autour One';
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2.6px;
+    color: var(--color-palette-5);
+}
+
+p {
+    font-size: 14px;
+    color: var(--color-palette-5);
+}
+
+/* banner       : Banner Principal 
+------------------------------------------------------------
+*/
+
+#banner {
+    background-color: var(--color-palette-3);
+}
+
+.banner__sect {
+    padding: 70px 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;    
+}
+
+.banner__content {
+    z-index: 2;
+}
+
+.cont--newsletter {
+    max-width: 320px;
+    height: 280px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cont--newsletter h3 {
+    width: 100%;
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 50px;
+    letter-spacing: 2px;
+    color: var(--color-palette-4);
+}
+
+.cont--newsletter a {
+    display: block;
+    width: 136px;
+    padding: 10px;
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: bolder;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: var(--color-palette-4 );
+    transition: .2s ease-in;
+}
+
+.cont--newsletter a:hover {
+    transform: scale(1.06);
+    background-color: var(--color-palette-5);
+}
+    
+.banner__img {
+    position: relative;
+    margin: auto 0;
+    width: 60%;
+    max-width: 656px;
+}
+
+.banner__img img {
+    width: 100%;
+    box-shadow: 0 0 10px var(--color-palette-1);
+}
+
+.cont--blob {
+    position: absolute;
+}
+
+.blob-left {
+    left: 0;
+}
+
+
+/* shelter      : Refugio Simbel
+------------------------------------------------------------
+*/
+
+#shelter {
+    background: linear-gradient(180deg, #FFF 0%, var(--color-palette-2) 100%);
+}
+
+.shelter__sect {
+    padding: 40px 0;
+    gap: 30px;
+}
+
+.shelter--top {
+    width: 88%;
+    max-width: 1236px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;       
+    align-items: center; 
+}
+
+.shelter--top h2 {
+    margin: 0 10px;
+}
+
+.shelter--top .line {
+    width: 30%;
+    height: 3px;
+    background: var(--color-palette-4);
+}
+
+.shelter--bottom {
+    gap: 20px 40px;
+}
+
+.shelter--bottom .card {
+    width: 220px;
+    height: 330px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--color-palette-2);
+}
+
+.card--info {
+    margin: 0 auto;
+    width: 120px;
+    padding: 40px 8px 15px;
+    border-radius: 10px 10px 0 0;
+    transform: translateY(-20px);
+    background-color: var(--color-palette-4);
+    transition: .2s ease-in;
+}
+
+.card--info:hover {
+    padding-top: 15px;
+    transform: translateY(-45px);
+}
+
+.card--info:active {
+    background-color: var(--color-palette-5);
+}
+
+.card--info a {
+    position: relative;
+    display: block;
+    text-align: center;
+    color: var(--color-palette-3);
+}
+
+.card--info a span {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    transform: translateY(5px);
+    transition: .2s ease-in-out;
+}
+
+.card--info a:hover span {
+    display: inline;
+    transform: translateY(-2px);
+    opacity: 1;
+}
+
+/* gallery      : Galería
+------------------------------------------------------------
+*/
+
+#gallery {
+    background-color: var(--color-palette-2);    
+}
+
+.gallery__sect {
+    padding: 80px 0; 
+    gap: 50px;
+}
+
+.gallery--top {
+    align-self: flex-start;
+    max-width: 280px;
+    padding-top: 50px;
+    border-top: 3px solid var(--color-palette-4);
+}
+
+.gallery--top p {
+    width: 76%;
+    margin-top: 40px;
+    color: #000;
+}
+
+.gallery--bottom {
+    width: 60%;
+    max-width: 900px;
+    height: 440px;
+    gap: 30px;
+}
+
+.gallery--bottom .image {
+    flex: 1 1;
+    min-width: 200px;
+    height: 200px;
+    background-color: var(--color-palette-4);
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+}
+
+/* allies      : Aliados
+------------------------------------------------------------
+*/
+
+#allies {
+    background-color: var(--color-palette-4);
+}
+
+.allies--top {
+    margin: 0 auto;
+    text-align: center;
+    padding: 35px;
+}
+
+.allies--bottom {
+    margin: 0 auto;
+    width: 80%;
+    padding: 50px 0 50px 0;
+    border-top: 3px solid var(--color-palette-5);
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.allies--bottom .card {
+    display: flex;
+    gap: 50px;
+}
+
+.allies--bottom .card img {
+    width: 150px;
+    height: 150px;
+}
+
+.card--content {
+    width: 200px;
+}
+
+.card--content h4 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.card--content p {
+    font-size: 14px;
+}
+
+/* subscribe    : Formulario de suscripción
+------------------------------------------------------------
+*/
+
+#subscribe {
+    background-image: url('../img/banner-form-adoption.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-subs {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.subscribe__sect {
+    padding: 70px 0 70px;
+}
+
+.subscribe--top {
+    margin: auto 40px 20px 40px;
+    text-align: center;
+}
+
+.subscribe--bottom {
+    display: flex;
+    margin-top: 50px;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    width: 70%;
+    gap: 20px 50px;
+}
+
+.form .form-input {
+    padding: 10px;
+    width: 75%;
+    border: none;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+    background-color: transparent;
+    border-bottom: 2px solid var(--color-palette-5);
+}
+
+.form .form-label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    cursor: text;
+    color: var(--color-palette-5);
+    transition: .2s ease-in-out;
+}
+
+.form-input:focus ~ .form-label, 
+.form-input:valid ~ .form-label {
+    left: 0;
+    top: -20px;
+}
+
+.form-submit {
+    display: inline-block;
+    width: 120px;
+    padding: 6px;
+    font-size: 14px;
+    font-weight: bolder;
+    letter-spacing: 2.2px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--color-palette-3);
+    background-color: var(--color-palette-1);
+    transition: .2s ease-in-out;
+} 
+
+.form-submit:hover {
+    transform: scale(1.05);
+    background-color: var(--color-palette-4);
+}
+
+/* footer       : Pie de página
+------------------------------------------------------------
+*/
+.footer__center {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+    padding: 10px 20px;
+    text-align: left;
+    background-color: var(--color-palette-5);
+}
+
+.column {
+    padding: 32px 0 32px 0;
+    width: 140px;
+    margin: 0 auto;
+    color: var(--color-palette-3);
+}
+
+.column:nth-child(1) img {
+    width: 100%;
+}
+
+.column h4 {
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.column--content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 10px;
+}
+
+.column--content a {
+    width: max-content;  
+    font-size: 11px;
+    font-weight: lighter;
+    color: var(--color-palette-2);
+}
+
+.column:last-child .column--content {
+    flex-direction: row;
+}
+
+.column--content a img {
+    height: 23px;
+}
+
+.footer__bottom {
+    height: 50px;
+    filter: brightness(92%);
+    background-color: var(--color-palette-5); 
+}
+
+.footer__bottom p {
+    font-size: 11px;
+    text-align: center;
+    color: var(--color-palette-2);
+}
+
+/*  Fontawesome
+------------------------------------------------------------
+*/
+.svg-inline--fa {
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+/*  Fonts 
+------------------------------------------------------------
+*/
+@font-face {
+    font-family: 'Be Vietman Pro';
+    src: url('../fonts/bvp_regular/bevietnampro-regular-webfont.eot');
+    src: url('../fonts/bvp_regular/bevietnampro-regular-webfont.woff2') format('woff2'),
+        url('../fonts/bvp_regular//bevietnampro-regular-webfont.woff') format('woff'),
+        url('../fonts/bvp_regular/bevietnampro-regular-webfont.ttf') format('truetype'),
+        url('../fonts/bvp_regular/bevietnampro-regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Autour One';
+    src: url('../fonts/Autour_One/autourone-regular-webfont.eot');
+    src: url('../fonts/Autour_One/autourone-regular-webfont.woff2') format('woff2'),
+        url('../fonts/Autour_One/autourone-regular-webfont.woff') format('woff'),
+        url('../fonts/Autour_One/autourone-regular-webfont.ttf') format('truetype'),
+        url('../fonts/Autour_One/autourone-regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Media Queries
+------------------------------------------------------------
+*/
+@media only screen and (max-width:1120px) {
+    .gallery--top {
+        max-width: none;
+        width: 90%;
+        text-align: center;
+    }
+
+    .gallery--top p {
+        margin: 40px auto 0;
+    }
+
+    .gallery--bottom {
+        width: 100%;
+        height: 220px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+    }    
+
+    .form {
+        justify-content: flex-end;
+    }
+
+    .form .form-input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:860px) {
+    .cont-nav {
+        display: block;
+        cursor: pointer;
+    }
+
+    .cont-nav div.line {
+        width: 30px;
+        height: 3px;
+        background: #000;
+        margin: 6px 0;
+    }
+
+    .link-form {
+        display: none;
+    }
+
+    .banner__sect {
+        padding-top: 40px;
+    }
+    
+    .banner__content {
+        width: 80%;
+    }
+
+    .banner__img {
+        margin-top: 60px;
+        width: 80%;
+    }
+
+    .nav-bar {
+        display: none;
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+
+    .active {
+        display: block;
+    }
+    
+    .nav-bar ul {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    
+    .navi-link {
+        margin: 0 auto;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width:512px) {
+    .allies--bottom .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .allies--bottom .card img {
+        margin: 0 auto;
+    }
+}
